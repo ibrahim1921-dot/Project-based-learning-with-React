@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body*/
+body{
+    
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c0fe);
+    background-size: 300% 300%;
+    animation: bg-pan 20s ease infinite;
+}
+
+/* Style the heading */
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+/* Style the input field */
+.input-area{
+    margin-bottom: 1.5rem;
+    width: 11.7rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+/* Style the placeholder */
+.input-area::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+input[type='text']{
+    font-size: 1rem;
+}
+
+/* Style the search button */
+.search-btn{
+    background-color: #2563eb; /* primary blue */
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    
+}
+.search-btn:hover{
+    background-color: #1e40af; /* dark blue */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+.search-btn:disabled{
+    background-color: #70acf1; /* light blue */
+    cursor: not-allowed;
+    transform: scale(1);
+}
+.search-btn:focus{
+    border: none;
+}
+
+
+/* Style the clear button */
+.clear-btn{
+    background-color: #ef4444; /* primary red */
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    width: 2.5rem;
+}
+.clear-btn:hover{
+    background-color: #b91c1c; /* dark red */
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.clear-btn:disabled{
+    background-color: #f87171; /* light red */
+    cursor: not-allowed;
+    transform: scale(1);
+}
+.form-row{
+    display:flex ;
+    justify-content: center;
+    gap:0.5rem ;
+    margin: 0, auto;
+}
+.search-btn,.clear-btn {
+    height: 2rem;
+}
+
+/*Style weather data container*/
+.weather-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(6px) saturate(160px);
+    -webkit-backdrop-filter: blur(6px) saturate(160px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: block;
+    position: relative;
+    padding: 1.25rem 2rem 1.75rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.18);
+    max-width: 28rem;
+    width: 20rem;
+    text-align: center;
+    margin-top: 1rem auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.weather-icon-top{
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.35rem;
+    border-radius: 50%;
+    background:radial-gradient(circle at 35% 35%,#ffffff 0%, #e6f2ff) ;
+    box-shadow: 0 4px 10px -2px rgba(0,0,0,0.25);
+
+    object-fit: contain;
+    pointer-events: none;
+    margin: 0;
+    transform: none;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+
+
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark){
+    .weather-container{
+      background: rgba(30,41,59,0.55);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 8px 28px -4px rgba(0,0,0,0.5);
+      color: #e2e8f0;
+    }
+    .weather-icon-top{
+      background: radial-gradient(circle at 35% 35%, #1e293b 0%, #2c3c52 65%, #1b2635 100%);
+    }
+  }
+
+/*Style the city name*/
+.city-name{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*Style the temperature description*/
+.weather-description{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Style the temperature*/
+.weather-temp{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*Style the geolocation button*/
+.location-btn{
+    background-color: #10b981; /* primary green */
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    padding:0 0.9rem;
+    font-size: 1rem;
+    height: 2rem;
+    
+}
+.location-btn:hover{
+    cursor: pointer;
+    background-color: #047857; /* dark green */
+    transition:background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
+}
